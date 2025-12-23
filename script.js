@@ -19,6 +19,19 @@ function sendData(event){
     array.push(education[i].value);
    }
 
+    // let reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // if(email === 0 || !reg.test(email)){
+    //     alert("input email");
+    //     return;
+    // }
+
+    
+   if(!emailValidation(email)){
+    return;
+   }
+
+
 
    let output = "Name: " + name +"\n" + 
    "Email: " + email +"\n" + "Password: " + password +"\n" +
@@ -35,5 +48,19 @@ function sendData(event){
 
 let myForm = document.getElementById("myForm");
 myForm.addEventListener("submit", sendData);
+
+
+
+function emailValidation(email){
+    let reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(email.length === 0 || !reg.test(email)){
+        alert("input email");
+        return false;
+    }
+    return true;
+}
+
+
 
 
