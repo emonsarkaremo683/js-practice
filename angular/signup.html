@@ -1,82 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
         }
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md fade-in">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-gray-800">Create an Account</h2>
-            <p class="text-gray-500">Join us and start your journey</p>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div>
+      <div
+        class="flex justify-center items-center w-full h-[100vh] bg-white px-5 py-5"
+      >
+        <div
+          class="xl:max-w-7xl bg-white drop-shadow-xl border border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-2.5"
+        >
+          <div
+            class="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex"
+          >
+            <img
+              src="https://www.tailwindtap.com/assets/components/form/createaccount/login.svg"
+              alt="login"
+              class="h-[500px]"
+            />
+          </div>
+          <div class="mx-auto w-full lg:w-1/2 md:p-10 py-5 md:py-0">
+            <h1
+              class="text-center text-2xl sm:text-3xl font-semibold text-blue-800"
+            >
+              Create Account
+            </h1>
+            <div class="w-full mt-5 sm:mt-8">
+              <div
+                class="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-5"
+              >
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <input
+                    class="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-300 placeholder-gray-500 text-sm focus:border focus:outline-none"
+                    type="text"
+                    placeholder="Your first name"
+                  /><input
+                    class="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-300 placeholder-gray-500 text-sm focus:border focus:outline-none"
+                    type="text"
+                    placeholder="Your last name"
+                  />
+                </div>
+                <input
+                  class="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-300 placeholder-gray-500 text-sm focus:border focus:outline-none"
+                  type="email"
+                  placeholder="Enter your email"
+                /><input
+                  class="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-300 placeholder-gray-500 text-sm focus:border focus:outline-none"
+                  type="tel"
+                  placeholder="Enter your phone"
+                /><input
+                  class="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-300 placeholder-gray-500 text-sm focus:border focus:outline-none"
+                  type="password"
+                  placeholder="Password"
+                />
+                <div
+                  class="flex items-center gap-1 sm:gap-4 justify-start pl-2"
+                >
+                  <input type="checkbox" class="text-blue-800" />
+                  <h3 class="flex items-center whitespace-nowrap text-xs">
+                    I agree to the<!-- -->
+                    <span class="text-blue-800">&nbsp;Terms</span>&nbsp;and<span
+                      class="text-blue-800"
+                      >&nbsp;Privacy Policy</span
+                    >.
+                  </h3>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                  <button
+                    class="md:mt-5 tracking-wide font-semibold bg-blue-800 text-white w-full py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  >
+                    <span>Sign Up</span></button
+                  ><button
+                    class="md:mt-5 tracking-wide text-blue-800 font-semibold border-blue-800 border w-full py-4 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  >
+                    <span>Sign In</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <form action="login.html">
-            <div class="mb-4">
-                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <i class="fas fa-user text-gray-400"></i>
-                    </span>
-                    <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition-shadow duration-300" placeholder="John Doe" required>
-                </div>
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <i class="fas fa-envelope text-gray-400"></i>
-                    </span>
-                    <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition-shadow duration-300" placeholder="your.email@example.com" required>
-                </div>
-            </div>
-            <div class="mb-4">
-                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <i class="fas fa-lock text-gray-400"></i>
-                    </span>
-                    <input type="password" id="password" name="password" class="shadow-sm appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition-shadow duration-300" placeholder="******************" required>
-                </div>
-            </div>
-            <div class="mb-6">
-                <label for="confirm_password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <i class="fas fa-lock text-gray-400"></i>
-                    </span>
-                    <input type="password" id="confirm_password" name="confirm_password" class="shadow-sm appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline transition-shadow duration-300" placeholder="******************" required>
-                </div>
-            </div>
-            <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-full transition-transform transform hover:scale-105 duration-300" type="submit">
-                    Sign Up
-                </button>
-            </div>
-            <div class="mt-8 text-center">
-                <p class="text-gray-600">Already have an account? <a href="login.html" class="text-blue-500 hover:text-blue-800 font-bold">Log in</a></p>
-            </div>
-        </form>
+      </div>
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
-</body>
+  </body>
 </html>
